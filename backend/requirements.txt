@@ -1,6 +1,8 @@
-Django>=4.2
+Django
 djangorestframework
 gunicorn
 psycopg2-binary
 qrcode
 Pillow
+whitenoise
+
