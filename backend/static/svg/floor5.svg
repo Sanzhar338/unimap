@@ -1,0 +1,191 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1200 1200"
+  preserveAspectRatio="xMidYMid meet">
+
+
+<style>
+  .room {
+    fill: #e6f1ff;
+    stroke: #9bbcf2;
+    stroke-width: 1.2;
+    cursor: pointer;
+    transition: fill 0.15s;
+  }
+  .room:hover { fill: #cfe3ff; }
+
+  .label {
+    font-size: 13px;
+    fill: #2c2c2c;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+  }
+
+  .corridor { fill:  #ded1d1ff; }
+
+  .service {
+    fill: #e0e0e0;
+    stroke: #aaa;
+  }
+
+  .stair {
+    fill: #4da3ff;
+    stroke: #2c6fb7;
+    stroke-width: 1;
+  }
+</style>
+
+<g transform="translate(50,400)">
+<!-- ===== КОРИДОРЫ ===== -->
+<rect class="corridor" x="20" y="105" width="1065" height="30"/>
+
+
+<!-- ===== ВЕРХНИЙ РЯД АУДИТОРИЙ 2 КОРПУСА ===== -->
+  <g transform="translate(20,40)">
+
+    <g class="room" data-room="2/500">
+      <rect width="40" height="60"/>
+      <text x="20" y="30" class="label">2/500</text>
+    </g>
+
+    <g class="room" data-room="2/501a" transform="translate(45,0)">
+      <rect width="40" height="60"/>
+      <text x="20" y="30" class="label">2/501a</text>
+    </g>
+
+    <g class="room" data-room="2/501" transform="translate(90,0)">
+      <rect width="110" height="60"/>
+      <text x="40" y="30" class="label">2/501</text>
+    </g>
+
+    <!-- WC -->
+    <g class="service" transform="translate(205,0)">
+      <rect width="25" height="60"/>
+      <text x="13" y="30" class="label">WC</text>
+    </g>
+
+    <!-- ЛЕСТНИЦА 1 -->
+    <g class="stair" data-node="stair_2_1" transform="translate(235,0)">
+      <rect width="60" height="60" />
+      <text x="20" y="24" class="label">⇧</text>
+    </g>
+
+    <g class="room" data-room="2/502" transform="translate(300,0)">
+      <rect width="45" height="60"/>
+      <text x="25" y="30" class="label">2/502</text>
+    </g>
+
+    <g class="room" data-room="2/503" transform="translate(350,0)">
+      <rect width="70" height="60"/>
+      <text x="35" y="30" class="label">2/503</text>
+    </g>
+
+    <g class="room" data-room="2/504" transform="translate(425,0)">
+      <rect width="60" height="60"/>
+      <text x="30" y="30" class="label">2/504</text>
+    </g>
+
+    <g class="room" data-room="2/506" transform="translate(490,0)">
+      <rect width="80" height="60"/>
+      <text x="40" y="30" class="label">2/506</text>
+    </g>
+
+    <g class="room" data-room="2/507" transform="translate(575,0)">
+      <rect width="60" height="60"/>
+      <text x="30" y="30" class="label">2/507</text>
+    </g>
+
+    <g class="room" data-room="2/508" transform="translate(640,0)">
+      <rect width="70" height="60"/>
+      <text x="35" y="30" class="label">2/508</text>
+    </g>
+
+    <g class="room" data-room="2/509" transform="translate(715,0)">
+      <rect width="60" height="60"/>
+      <text x="30" y="30" class="label">2/509</text>
+    </g>
+
+    <!-- ЛЕСТНИЦА 2 -->
+    <g class="stair" data-node="stair_2_2" transform="translate(780,0)">
+      <rect width="60" height="60" />
+      <text x="20" y="24" class="label">⇧</text>
+    </g>
+
+    <!-- WC -->
+    <g class="service" transform="translate(845,0)">
+      <rect width="50" height="60"/>
+      <text x="25" y="30" class="label">WC</text>
+    </g>
+
+    <g class="room" data-room="2/510" transform="translate(900,0)">
+      <rect width="80" height="60"/>
+      <text x="40" y="30" class="label">2/510</text>
+    </g>
+
+    <g class="room" data-room="2/511" transform="translate(985,0)">
+      <rect width="80" height="60"/>
+      <text x="40" y="30" class="label">2/511</text>
+    </g>
+
+  </g>
+
+  <!-- ===== НИЖНИЙ РЯД 2 КОРПУСА ===== -->
+  <g transform="translate(20,140)">
+    <g class="room" data-room="2/522">
+      <rect width="125" height="100"/>
+      <text x="60" y="50" class="label">2/522</text>
+    </g>
+
+    <g class="room" data-room="2/521" transform="translate(130,0)">
+      <rect width="100" height="100"/>
+      <text x="50" y="50" class="label">2/521</text>
+    </g>
+
+    <g class="room" data-room="2/520" transform="translate(235,0)">
+      <rect width="50" height="60"/>
+      <text x="25" y="30" class="label">2/520</text>
+    </g>
+
+    <g class="room" data-room="2/519" transform="translate(290,0)">
+      <rect width="55" height="60"/>
+      <text x="30" y="30" class="label">2/519</text>
+    </g>
+
+    <g class="room" data-room="2/518" transform="translate(350,0)">
+      <rect width="60" height="60"/>
+      <text x="30" y="30" class="label">2/518</text>
+    </g>
+
+    <g class="room" data-room="2/517" transform="translate(415,0)">
+      <rect width="60" height="60"/>
+      <text x="30" y="30" class="label">2/517</text>
+    </g>
+
+    <g class="room" data-room="2/516" transform="translate(480,0)">
+      <rect width="80" height="60"/>
+      <text x="40" y="30" class="label">2/516</text>
+    </g>
+
+    <g class="room" data-room="2/515" transform="translate(565,0)">
+      <rect width="70" height="60"/>
+      <text x="35" y="30" class="label">2/515</text>
+    </g>
+
+    <g class="room" data-room="2/514" transform="translate(640,0)">
+      <rect width="115" height="60"/>
+      <text x="60" y="30" class="label">2/514</text>
+    </g>
+
+    <g class="room" data-room="2/512" transform="translate(760,0)">
+        <rect width="80" height="60"/>
+        <text x="40" y="30" class="label">2/512</text>
+    </g>
+
+    <g class="room" data-room="1" transform="translate(845,0)">
+        <rect width="220" height="100"/>
+        <text x="40" y="30" class="label"></text>
+    </g>
+  </g>
+</g>
+</svg>

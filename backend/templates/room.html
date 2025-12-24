@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Аудитория {{ room }}</title>
+
+    <!-- СТИЛЬ НЕ МЕНЯЕМ -->
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="room-number">Аудитория {{ room }}</div>
+        <div class="building-info">
+            Корпус {{ corp }}, {{ floor }}-й этаж
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-tabs">
+        <button class="tab-btn active" data-tab="schedule">📅 Расписание</button>
+        <button class="tab-btn" data-tab="map">🗺️ Карта</button>
+    </div>
+    <!-- Schedule Section -->
+    <div id="schedule" class="content-section active">
+
+        <!-- ОБЩЕЕ РАСПИСАНИЕ (ЗАГЛУШКА) -->
+        <div class="schedule-card">
+            <div class="time">10:00 - 11:20</div>
+            <div class="subject">Программирование</div>
+            <div class="teacher">Преподаватель: Иванов И.И.</div>
+            <div class="group">Группа: ПМИ-2-23</div>
+            <div class="lesson-type lab">Лабораторная</div>
+        </div>
+
+        <div class="schedule-card">
+            <div class="time">11:30 - 12:50</div>
+            <div class="subject">Базы данных</div>
+            <div class="teacher">Преподаватель: Петрова А.С.</div>
+            <div class="group">Группа: ПМИ-1-23</div>
+            <div class="lesson-type practice">Практика</div>
+        </div>
+
+        <div class="schedule-card current">
+            <div class="time">
+                13:00 - 14:20
+                <span class="current-label">Сейчас</span>
+            </div>
+
+            <button class="button">Отметиться</button>
+
+            <div class="subject">БЖД и экология</div>
+            <div class="teacher">
+                Преподаватель: Жапакова Бурул Сабырбековна
+            </div>
+            <div class="group">Группа: ПМИ-1-23</div>
+            <div class="lesson-type lecture">Лекция</div>
+        </div>
+
+    </div>
+
+    <!-- Map Section -->
+    <div id="map" class="content-section">
+
+        <!-- КАРТА -->
+         <div class="floors-panel two-rows">
+            <button class="floor-btn" data-floor="1">1 эт.</button>
+            <button class="floor-btn" data-floor="2">2 эт.</button>
+            <button class="floor-btn" data-floor="3">3 эт.</button>
+
+            <button class="floor-btn" data-floor="4">4 эт.</button>
+            <button class="floor-btn" data-floor="5">5 эт.</button>
+            <button class="floor-btn" data-floor="6">6 эт.</button>
+        </div>
+        <div class="map-container" style="padding: 0; overflow: hidden;">
+            <div id="map-wrapper"
+                data-room="{{ room }}"
+                data-floor="{{ floor }}"
+                style="width:100%; height:500px; overflow:hidden; position:relative;">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="{% static 'js/map.js' %}"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tabs = document.querySelectorAll(".tab-btn");
+    const sections = document.querySelectorAll(".content-section");
+
+    tabs.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            // убираем active у всех кнопок
+            tabs.forEach(b => b.classList.remove("active"));
+
+            // скрываем все секции
+            sections.forEach(s => s.classList.remove("active"));
+
+            // активируем нужную кнопку
+            btn.classList.add("active");
+
+            // показываем нужный блок
+            const target = btn.dataset.tab;
+            document.getElementById(target).classList.add("active");
+        });
+    });
+
+});
+</script>
+</body>
+</html>
